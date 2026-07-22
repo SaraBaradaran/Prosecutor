@@ -25,7 +25,7 @@ The top-level repository is organized as follows:
 
 * **`Dockerfile`** – Provides a fully configured environment for reproducing the complete experimental pipeline.
 
-### Reproducing the Evaluation
+## Reproducing the Evaluation
 
 Reproducing the entire experimental evaluation from scratch is computationally expensive and requires several weeks of execution time. Therefore, we do **not** recommend that reviewers rerun the full experiments.
 
@@ -46,7 +46,7 @@ The artifact can be built and executed in two ways:
 
 ---
 
-# Running with Docker (Recommended)
+## Running with Docker (Recommended)
 
 Build the Docker image:
 
