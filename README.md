@@ -64,31 +64,33 @@ The Docker image contains all required dependencies and is ready to execute the 
 
 ---
 
-# Manual Installation
+## Running Fault Localization Experiments
 
-## 1. Create a Python Virtual Environment
+Different fault localization techniques require different software dependencies, environment configurations, and Java versions. To simplify this process, we provide a `build.sh` script under the `FaultLocalization/` directory that automatically configures the appropriate environment for the selected technique.
 
-From the project root (`/app`):
-
-```bash
-python3 -m venv .env
-source .env/bin/activate
-pip install -r requirements.txt
-```
-
----
-
-## 2. Verify Defects4J
-
-Verify that Defects4J has been installed correctly:
+When using the provided Docker container, **before running any fault localization technique**, initialize the environment by executing:
 
 ```bash
-defects4j info -p Lang
+source build.sh <technique_name>
 ```
 
-The command should complete successfully without reporting any errors.
+where `<technique_name>` is one of [`mbfl`, `sbfl`, `smartfl`, `prosecutor`]
 
----
+For example, to run **Prosecutor** on the first buggy version of the **Lang** project (i.e., **Lang-1**), first configure the environment:
+
+```bash
+cd FaultLocalization
+source build.sh prosecutor
+```
+
+Then execute:
+
+```bash
+python3 GenerateActiveBugs.py prosecutor Lang 1
+```
+
+This command runs Prosecutor on the specified Defects4J bug and generates a ranked list of suspicious program locations. The structure and interpretation of the generated output are described in the following section.
+
 
 ## 3. Build Bingo
 
