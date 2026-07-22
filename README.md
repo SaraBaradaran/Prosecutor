@@ -74,6 +74,28 @@ cd FaultLocalization
 source build.sh prosecutor
 ```
 
+### Additional Setup for Prosecutor
+
+**Prosecutor** requires two background Java processes that provide static interprocedural and intraprocedural dependency information used during Execution Provenance Graph (EPG) construction.
+
+These processes only need to be started only **once** after configuring the environment. They can remain running while executing Prosecutor on multiple Defects4J bugs.
+
+Start the daemons as follows:
+
+```bash
+java -cp build/classes:libs/* IntraproDependencies 1>/dev/null 2>/dev/null &
+java -cp build/classes:libs/* InterproDependencies 1>/dev/null 2>/dev/null &
+```
+
+If these daemons are not running when Prosecutor is executed, the EPG constructor will be unable to communicate with the dependency analysis services, and execution will fail with an error similar to:
+
+```text
+py4j.protocol.Py4JNetworkError: An error occurred while trying to connect to the Java server
+```
+
+Once the two background processes have been started, they do not need to be restarted before running Prosecutor on additional benchmarks unless they are explicitly terminated or the environment is restarted.
+
+
 Then execute:
 
 ```bash
