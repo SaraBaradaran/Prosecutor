@@ -76,7 +76,7 @@ source build.sh prosecutor
 
 ### Additional Setup for Prosecutor
 
-**Prosecutor** also requires two background Java processes that provide static interprocedural and intraprocedural dependency information used during Execution Provenance Graph (EPG) construction.
+**Prosecutor** also requires two background Java processes that provide static interprocedural and intraprocedural dependency information used during Execution Propagation Graph (EPG) construction.
 
 These processes only need to be started only **once** after configuring the environment. They can remain running while executing Prosecutor on multiple Defects4J bugs.
 
