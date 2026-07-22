@@ -35,15 +35,6 @@ Importantly, reproducing the paper's reported results from the provided rankings
 
 The `Dockerfile` is intended for users who wish to rerun the complete fault localization experiments from scratch on Defects4J benchmarks.
 
-
-
-The artifact is organized as follows:
-
-* **`prosecutor/`** – implementation of Prosecutor.
-* **Baseline implementations** – implementations of the eight competing fault localization techniques used in our evaluation.
-* **Experimental scripts** – scripts for reproducing the experimental results.
-* **Supporting data** – benchmark programs, execution traces, and intermediate artifacts required by the experiments.
-
 The artifact can be built and executed in two ways:
 
 1. **Docker (Recommended)** – provides a fully configured environment with all required dependencies.
@@ -52,20 +43,6 @@ The artifact can be built and executed in two ways:
 > **Important**
 >
 > When performing a manual installation, you must update the base directory used throughout the project. Specifically, modify the base path defined in the source files and helper scripts so that it matches the directory where the artifact is installed. Failure to do so will result in incorrect file paths during execution.
-
----
-
-# System Requirements
-
-The artifact has been tested on **x86-64 Linux**.
-
-The following software is required:
-
-* Java
-* Python 3
-* Git
-* Defects4J
-* Docker (optional, recommended)
 
 ---
 
