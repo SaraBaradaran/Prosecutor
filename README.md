@@ -87,15 +87,12 @@ java -cp build/classes:libs/* IntraproDependencies 1>/dev/null 2>/dev/null &
 java -cp build/classes:libs/* InterproDependencies 1>/dev/null 2>/dev/null &
 ```
 
-If these daemons are not running when Prosecutor is executed, the EPG constructor will be unable to communicate with the dependency analysis services, and execution will fail with an error similar to:
-
-```text
-py4j.protocol.Py4JNetworkError: An error occurred while trying to connect to the Java server
-```
+If these daemons are not running when Prosecutor is executed, the EPG constructor will be unable to communicate with the dependency analysis services, and execution will fail with an error similar to `py4j.protocol.Py4JNetworkError: An error occurred while trying to connect to the Java server
+`
 
 Once the two background processes have been started, they do not need to be restarted before running Prosecutor on additional benchmarks unless they are explicitly terminated or the environment is restarted.
 
-Then to run **Prosecutor** for exmample on the first buggy version of the **Lang** project (i.e., **Lang-1**) execute:
+Then, to run **Prosecutor** for example on the first buggy version of the **Lang** project (i.e., **Lang-1**) execute:
 
 ```bash
 python3 GenerateActiveBugs.py prosecutor Lang 1
