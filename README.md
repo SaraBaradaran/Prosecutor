@@ -17,7 +17,7 @@ The top-level repository is organized as follows:
 
 * **`FaultLocalization/`** – Contains the implementation of our fault localization approach (**Prosecutor**) as well as the implementations and execution scripts for all baseline techniques evaluated in the paper. This directory allows users to run any supported fault localization technique on arbitrary Defects4J benchmarks.
 
-* **`Rankings/`** – Contains the fault rankings produced by every evaluated technique, including Prosecutor and its ablated variants, for all benchmarks used in our evaluation.
+* **`rankings/`** – Contains the fault rankings produced by every evaluated technique, including Prosecutor and its ablated variants, for all benchmarks used in our evaluation.
 
 * **`scripts/`** – Contains Python scripts that read the precomputed rankings in `Rankings/` and reproduce all tables and figures reported in the paper.
   
