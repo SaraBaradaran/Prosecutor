@@ -35,15 +35,6 @@ Importantly, reproducing the paper's reported results from the provided rankings
 
 The `Dockerfile` is intended for users who wish to rerun the complete fault localization experiments from scratch on Defects4J benchmarks.
 
-The artifact can be built and executed in two ways:
-
-1. **Docker (Recommended)** – provides a fully configured environment with all required dependencies.
-2. **Manual installation** – installs all dependencies directly on the host machine.
-
-> **Important**
->
-> When performing a manual installation, you must update the base directory used throughout the project. Specifically, modify the base path defined in the source files and helper scripts so that it matches the directory where the artifact is installed. Failure to do so will result in incorrect file paths during execution.
-
 ---
 
 ## Running with Docker (Recommended)
