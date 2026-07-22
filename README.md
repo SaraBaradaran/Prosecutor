@@ -100,6 +100,32 @@ python3 GenerateActiveBugs.py prosecutor Lang 1
 
 This command runs Prosecutor on the specified Defects4J bug and generates a ranked list of suspicious program locations. The structure and interpretation of the generated output are described in the following section.
 
+## Running Baseline Techniques
+
+The provided `GenerateActiveBugs.py` script can also be used to execute the **SBFL** and **MBFL** baseline techniques on arbitrary Defects4J bugs.
+
+For example, to run **MBFL** on the first buggy version of the **Lang** project:
+
+```bash
+python3 GenerateActiveBugs.py mbfl Lang 1
+```
+
+Similarly, to run **SBFL** on the same benchmark:
+
+```bash
+python3 GenerateActiveBugs.py sbfl Lang 1
+```
+
+### Running SMARTFL
+
+SMARTFL uses its own execution script and should be run from the `baseline/SMARTFL/` directory.
+
+For example, to run SMARTFL on **Lang-1**:
+
+```bash
+cd baseline/SMARTFL
+python3 s.py fl Lang 1
+```
 
 ## 3. Build Bingo
 
