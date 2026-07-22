@@ -19,7 +19,7 @@ The top-level repository is organized as follows:
 
 * **`rankings/`** – Contains the fault rankings produced by every evaluated technique, including Prosecutor and its ablated variants, for all benchmarks used in our evaluation.
 
-* **`scripts/`** – Contains Python scripts that read the precomputed rankings in `Rankings/` and reproduce all tables and figures reported in the paper.
+* **`scripts/`** – Contains Python scripts that read the precomputed rankings in `rankings/` and reproduce all tables and figures reported in the paper.
   
 * **`oracle/`** – Contains the ground-truth faulty locations for every Defects4J benchmark. During evaluation, the generated fault rankings are compared against these ground-truth faults to compute the effectiveness metrics reported in the paper.
 
