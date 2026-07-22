@@ -107,6 +107,10 @@ This command runs Prosecutor on the specified Defects4J bug and generates a rank
 
 ### Running Baseline Techniques
 
+Before running a baseline technique, make sure the appropriate environment has been configured using `build.sh`. If you switch from one technique to another, remember to reconfigure the environment by running:
+
+source build.sh <technique_name>
+
 The provided `GenerateActiveBugs.py` script can also be used to execute the **SBFL** and **MBFL** baseline techniques on arbitrary Defects4J bugs.
 
 For example, to run **MBFL** on the first buggy version of the **Lang** project:
