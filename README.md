@@ -67,7 +67,7 @@ source build.sh <technique_name>
 
 where `<technique_name>` is one of [`mbfl`, `sbfl`, `smartfl`, `prosecutor`]
 
-For example, to run **Prosecutor** on the first buggy version of the **Lang** project (i.e., **Lang-1**), first configure the environment:
+For example, to run **Prosecutor**, first configure the environment as follows:
 
 ```bash
 cd FaultLocalization
@@ -76,7 +76,7 @@ source build.sh prosecutor
 
 ### Additional Setup for Prosecutor
 
-**Prosecutor** requires two background Java processes that provide static interprocedural and intraprocedural dependency information used during Execution Provenance Graph (EPG) construction.
+**Prosecutor** also requires two background Java processes that provide static interprocedural and intraprocedural dependency information used during Execution Provenance Graph (EPG) construction.
 
 These processes only need to be started only **once** after configuring the environment. They can remain running while executing Prosecutor on multiple Defects4J bugs.
 
@@ -95,8 +95,7 @@ py4j.protocol.Py4JNetworkError: An error occurred while trying to connect to the
 
 Once the two background processes have been started, they do not need to be restarted before running Prosecutor on additional benchmarks unless they are explicitly terminated or the environment is restarted.
 
-
-Then execute:
+Then to run **Prosecutor** for exmample on the first buggy version of the **Lang** project (i.e., **Lang-1**) execute:
 
 ```bash
 python3 GenerateActiveBugs.py prosecutor Lang 1
