@@ -97,6 +97,11 @@ Then, to run **Prosecutor** for example on the first buggy version of the **Lang
 ```bash
 python3 GenerateActiveBugs.py prosecutor Lang 1
 ```
+or to run on the first buggy version of the **Cli** project (i.e., **Cli-1**) execute:
+
+```bash
+python3 GenerateActiveBugs.py prosecutor Cli 1
+```
 
 This command runs Prosecutor on the specified Defects4J bug and generates a ranked list of suspicious program locations. The structure and interpretation of the generated output are described in the following section.
 
