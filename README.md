@@ -133,46 +133,7 @@ cd baseline/SMARTFL
 python3 s.py fl Lang 1
 ```
 
-## 3. Build Bingo
-
-Prosecutor relies on Bingo which calls LibDAI for marginal inference.
-
-```bash
-cd /app/FaultLocalization/prosecutor/bingo
-./scripts/build.sh
-```
-
----
-
-## 4. Build Prosecutor
-
-```bash
-cd /app/FaultLocalization
-source build.sh
-```
-
----
-
-## 5. Start the Dependency Daemons
-
-Before running Prosecutor, launch the dependency analysis services:
-
-```bash
-java -cp build/classes:libs/* IntraproDependencies >/dev/null 2>&1 &
-java -cp build/classes:libs/* InterproDependencies >/dev/null 2>&1 &
-```
-
----
-
-# Running Prosecutor
-
-Execute
-
-```bash
-python3 get-result.py
-```
-
-The script runs Prosecutor on the configured Defects4J bugs and produces output similar to the following:
+# Results
 
 ```text
 ==================== Results for Lang 1 when CFX = True ====================
