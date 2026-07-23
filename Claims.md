@@ -1,3 +1,8 @@
+# List of Claims
+
+This directory contains a complete list of the experimental claims made in the paper, together with instructions for reproducing and validating each claim.
+The directory also contains a **`scripts/`** subdirectory that provides the Python scripts required to regenerate the corresponding tables and figures directly from the precomputed rankings (and runtime statistics where applicable). Each claim below references the artifact component supporting it and the script(s) needed for reproduction.
+
 | Paper Section | Claim                                                                                                                                      | Artifact Evidence | How to Reproduce                                                  |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ----------------- | ----------------------------------------------------------------- |
 | **§5.1 RQ1**  | Prosecutor outperforms all evaluated statement-level baselines on Defects4J.                                                               | Table 3           | Run `/scripts/table3.py` on the rankings to regenerate Table 3.   |
