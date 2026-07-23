@@ -19,9 +19,7 @@ The top-level repository is organized as follows:
 
 * **`rankings/`** – Contains the fault rankings produced by every evaluated technique, including Prosecutor and its ablated variants, for all benchmarks used in our evaluation.
 
-* **`claims/`** – Contains a complete list of the claims made in the paper, including both major and minor claims. For each claim, this directory specifies the corresponding section of the paper, the artifact components that support the claim, and detailed instructions describing how reviewers can reproduce and validate it.
-
-* **`scripts/`** – Contains Python scripts that read the precomputed rankings in `rankings/` and reproduce all tables and figures reported in the paper.
+* **`claims/`** – Contains a complete list of the claims made in the paper, including both major and minor claims. For each claim, this directory specifies the corresponding section of the paper, the artifact components that support the claim, and detailed instructions describing how reviewers can reproduce and validate it (mostly by running scripts under `claims/scripts/`)
   
 * **`oracle/`** – Contains the ground-truth faulty locations for every Defects4J benchmark. During evaluation, the generated fault rankings are compared against these ground-truth faults to compute the effectiveness metrics reported in the paper.
 
