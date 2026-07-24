@@ -133,6 +133,48 @@ cd baseline/SMARTFL
 python3 s.py fl Lang 1
 ```
 
+Unlike the other fault localization techniques evaluated in the paper, **DepGraph** requires a CUDA-capable NVIDIA GPU. Consequently, if you wish to execute DepGraph inside the provided Docker container, you must first configure GPU support by installing the **NVIDIA Container Toolkit** on the host machine.
+
+Follow NVIDIA's official installation guide:
+
+> https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html
+
+After completing the installation, start the Docker container with GPU support enabled and verify that the GPU is accessible from within the container by running:
+
+```bash
+nvidia-smi
+```
+
+If the installation has been completed successfully, this command should display information about the available NVIDIA GPU without reporting any errors.
+After confirming that GPU support is available, navigate to the DepGraph implementation:
+
+```bash
+cd baselines/DepGraph
+```
+
+DepGraph has several additional Python dependencies that are independent of the main artifact. Install them by running:
+
+```bash
+pip install -r requirements.txt
+```
+
+DepGraph is executed on an entire Defects4J project at a time. To generate the rankings for a project, run:
+
+```bash
+python3 runtotal.py <project_name>
+```
+
+where `<project_name>` is one of the supported Defects4J projects (e.g., `Lang`, `Math`, `Chart`, `Compress`, etc.).
+
+For example, to run DepGraph on the **Lang** project:
+
+```bash
+python3 runtotal.py Lang
+```
+
+After execution completes, DepGraph generates the fault rankings for every buggy version of the selected project. These rankings are written to the `Result/` directory under `baselines/DepGraph`.
+
+
 # Results
 
 ```text
