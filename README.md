@@ -139,7 +139,19 @@ Follow NVIDIA's official installation guide:
 
 > https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html
 
-After completing the installation, start the Docker container with GPU support enabled and verify that the GPU is accessible from within the container by running:
+After completing the installation, start the Docker container with GPU support enabled. **Instead of** launching the container using:
+
+```bash
+docker run -it prosecutor
+```
+
+start it with GPU support enabled as follows:
+
+```bash
+sudo docker run -it --runtime=nvidia --gpus all prosecutor
+```
+
+After entering the container, verify that GPU access has been configured correctly by running:
 
 ```bash
 nvidia-smi
