@@ -41,7 +41,7 @@ The `Dockerfile` is intended for users who wish to rerun the complete fault loca
 
 ## Running with Docker (Recommended)
 
-Building the Docker image from `Dockerfile` requires approximately **30 GB** of free disk space to accommodate intermediate build layers and cached artifacts. The resulting Docker image occupies approximately **23 GB**. If you are only interested in running **Prosecutor**, you can build a substantially smaller image by commenting out the sections of the `Dockerfile` corresponding to the installation of the baseline techniques. These sections are clearly marked in the Dockerfile and can be safely omitted without affecting the Prosecutor implementation or its experimental pipeline.
+Building the Docker image from `Dockerfile` requires approximately **30 GB** of free disk space to accommodate intermediate build layers and cached artifacts. The resulting Docker image occupies approximately **23 GB**. On our evaluation machine, building the Docker image took approximately **10 minutes**. If you are only interested in running **Prosecutor**, you can build a substantially smaller image by commenting out the sections of the `Dockerfile` corresponding to the installation of the baseline techniques. These sections are clearly marked in the Dockerfile and can be safely omitted without affecting the Prosecutor implementation or its experimental pipeline.
 
 Build the Docker image:
 
