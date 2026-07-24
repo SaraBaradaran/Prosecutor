@@ -233,45 +233,6 @@ These statistics provide a breakdown of Prosecutor's execution, including the to
 
 These runtime statistics are also used to reproduce the runtime evaluation presented in Section 5.2 of the paper.
 
-# Selecting Benchmark Bugs
-
-The benchmark projects and bug IDs to evaluate are configured in
-
-```text
-get-result.py
-```
-
-Modify the project names and bug identifiers in this script to evaluate different Defects4J versions.
-
----
-
-# Running the Baselines
-
-The script
-
-```text
-GenerateActiveBugs.py
-```
-
-can execute either Prosecutor or any of the baseline techniques evaluated in the paper.
-
-Select the desired approach by uncommenting one of the following lines:
-
-```python
-# Mutation-Based Fault Localization (MBFL)
-# test_mutation_based_approaches(args.proj_name, args.bug_id, optimized=True)
-
-# Spectrum-Based Fault Localization (SBFL)
-# test_spectrum_based_approaches(args.proj_name, args.bug_id)
-
-# Prosecutor
-test_prosecutor(args.proj_name, args.bug_id, cfx=True)
-```
-
-Only one method should be enabled at a time.
-
----
-
 ## Testing on a Subset of Benchmarks
 
 Reproducing the complete experimental evaluation from scratch requires executing all evaluated fault localization techniques across the entire Defects4J benchmark suite. Since this process takes **several weeks** to complete, we do **not** recommend that reviewers rerun the full evaluation.
