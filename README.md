@@ -146,7 +146,7 @@ Follow NVIDIA's official installation guide:
 After completing the installation, start the Docker container with GPU support enabled. **Instead of** launching the container using `docker run -it prosecutor`, start it with GPU support enabled as follows:
 
 ```bash
-sudo docker run -it --runtime=nvidia --gpus all prosecutor
+docker run -it --runtime=nvidia --gpus all prosecutor
 ```
 
 After entering the container, verify that GPU access has been configured correctly by running:
