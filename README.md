@@ -23,6 +23,8 @@ The top-level repository is organized as follows:
   
 * **`oracle/`** – Contains the ground-truth faulty locations for every Defects4J benchmark. During evaluation, the generated fault rankings are compared against these ground-truth faults to compute the effectiveness metrics reported in the paper.
 
+* **`trace_files/`** – Contains the Error Propagation Graphs (EPGs) constructed by **Prosecutor** in its full configuration for every benchmark used in the evaluation. These precomputed EPGs are used to reproduce claims that depend on graph-level information, including the analysis of deep faults and the results presented in **Figure&nbsp;16**, without requiring reviewers to reconstruct the EPGs from scratch.
+
 * **`Dockerfile`** – Provides a fully configured environment for reproducing the complete experimental pipeline.
 
 ## Reproducing the Evaluation
