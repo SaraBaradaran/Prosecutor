@@ -172,7 +172,7 @@ For example, to run DepGraph on the **Lang** project:
 python3 runtotal.py Lang
 ```
 
-After execution completes, DepGraph generates the fault rankings for every buggy version of the selected project. These rankings are written to the `Result/` directory under `baselines/DepGraph`.
+After execution completes, DepGraph generates the fault rankings for every buggy version of the selected project. These rankings are written to the `Results/` directory under `baselines/DepGraph`.
 
 
 # Results
